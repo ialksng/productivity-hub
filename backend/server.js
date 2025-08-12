@@ -15,7 +15,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = 'your_super_secret_key_change_this';
-const CLIENT_URL = `http://localhost:${PORT}`;
+const CLIENT_URL = `https://productivity-hub-uksz.onrender.com`;
 // IMPORTANT: Add your Gemini API Key here
 const GEMINI_API_KEY = 'AIzaSyAxi3J1uf1BuLzrc4NQV86wQmkfORg8tqQ';
 
@@ -34,7 +34,7 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // --- 5. Database Connection ---
-const MONGO_URI = 'mongodb://localhost:27017/productivityhub';
+const MONGO_URI = 'mongodb+srv://ialksng:d3rnGDlyFC5C0QQ3@productivity-hub.fyvpw0y.mongodb.net/';
 mongoose.connect(MONGO_URI)
   .then(() => console.log('Successfully connected to MongoDB.'))
   .catch(err => console.error('MongoDB connection error:', err));
